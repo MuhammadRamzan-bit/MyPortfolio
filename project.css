@@ -1,0 +1,112 @@
+body{
+    background-color: rgba(2, 21, 38, 0.85);
+    display: flex;
+    justify-content: center;    /* Horizontal center */
+    align-items: center;        /* Vertical center */
+    min-height: 100vh;          /* Full viewport height */
+    margin: 0;
+    padding: 20px;              /* Mobile ke liye padding */
+    font-family: 'Inter', sans-serif;
+}
+
+h3{
+    text-decoration: underline;
+    font-size: 1.5rem;          /* Responsive font size */
+    margin-bottom: 15px;
+}
+h1{
+    text-decoration: underline;
+    font-size: 2rem;            /* Responsive font size */
+    margin-bottom: 20px;
+}
+#pdiv{
+    border: 2px solid aqua;
+    background-color: rgba(2, 21, 38, 0.9);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    display: inline-block;
+    max-width: 90%;             /* Mobile ke liye max width */
+    width: 100%;
+    max-width: 600px;           /* Desktop ke liye max width */
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2);
+}
+/* Tablet Styles (768px and below) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    #pdiv {
+        padding: 25px;
+        max-width: 95%;
+        border-radius: 12px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Styles (480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;    /* Top align on very small screens */
+        padding-top: 50px;
+    }
+    
+    #pdiv {
+        padding: 20px;
+        max-width: 98%;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Large Desktop Styles (1200px and above) */
+@media screen and (min-width: 1200px) {
+    #pdiv {
+        padding: 40px;
+        max-width: 700px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Landscape Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+    
+    #pdiv {
+        margin: 10px 0;
+    }
+}
