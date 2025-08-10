@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ramzan - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Hover effects */
+        .navbar a:hover {
+            color: aqua;
+            transition: color 0.3s ease;
+        }
+        
+        .detail:hover, .skill:hover, .projects:hover, .tol:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Mobile menu toggle (if needed later) */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        @media screen and (max-width: 480px) {
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .navbar a {
+                display: none;
+            }
+            
+            .navbar.active a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 style="color: aqua;" id="h1">Muhammad Ramzan</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="#intro">Home</a>
+            <a href="#info">About</a>
+            <a href="#myservice">Services</a>
+            <a href="#projects">Project</a>
+            <a href="#tools">Tools</a>
+            <a href="#rabta">Contact Me</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="intro" class="loading">
+            <div id="profileimg" class="loading"></div>
+            <div id="home">
+                <h1>Hi, I'm Muhammad Ramzan</h1>
+                <br>
+                <h3>Software Engineering Student | Full Stack Developer | Mobile App Developer</h3>
+                <br>
+                <p>
+                    A passionate Software Engineering student with expertise in Full Stack Web and Mobile App development. I
+                    specialize in designing and developing responsive, secure, and high-performance applications — from
+                    intuitive front-end interfaces to powerful back-end systems. Whether it's a modern website or a feature-rich
+                    mobile app, I turn concepts into interactive and impactful digital experiences.
+                </p>
+                <div id="button">
+                    <button onclick="scrollToSection('rabta')">Hire me</button>
+                    <button onclick="scrollToSection('rabta')">Contact</button>
+                </div>
+            </div>
+
+            
+
+            <div id="social">
+                <div class="sm" title="LinkedIn"></div>
+                <div class="sm" title="GitHub"></div>
+                <div class="sm" title="Twitter"></div>
+            </div>
+        </section>
+       
+        <hr>
+        
+        <section id="info" class="loading">
+            <h1 id="h1">About Me</h1>
+            <div id="aboutme">
+                <div class="detail">
+                    <p>I am Muhammad Ramzan, a dedicated and detail-oriented BS Software Engineering student at COMSATS
+                        University
+                        Islamabad, Attock Campus, currently in my 5th semester. My core expertise lies in Java and Android
+                        application development, complemented by a growing proficiency in full-stack web development with HTML,
+                        CSS,
+                        JavaScript, and Node.js.
+                    </p>
+                </div>
+                <div class="detail">
+                    <p>I am passionate about transforming ideas into functional, elegant, and user-friendly applications.
+                        Problem-solving, designing, and developing software are not just skills I possess — they are areas where
+                        I
+                        truly excel and find immense satisfaction. I thrive on tackling challenges, refining solutions, and
+                        bringing
+                        concepts to life through clean, efficient code and intuitive design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="myservice" class="loading">
+            <h1 id="h1">My Services</h1>
+            <div id="aboutme">
+                <div class="skill">
+                    <div style="font-size: 48px; margin-bottom: 15px;">💻</div>
+                    <h2>Software Development</h2>
+                    <p>
+                        I develop efficient and scalable software solutions tailored to solve real-world problems. My focus
+                        is on clean architecture, robust performance, and long-term maintainability.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div style="font-size: 48px; margin-bottom: 15px;">🌐</div>
+                    <h2>Web Development</h2>
+                    <p>
+                        I build responsive and dynamic websites that are fast, functional, and visually appealing. My
+                        approach ensures seamless performance across all devices.
+                    </p>
+                </div>
+                <div class="skill">
+                    <div style="font-size: 48px; margin-bottom: 15px;">📱</div>
+                    <h2>App Development</h2>
+                    <p>
+                        I create intuitive and feature-rich mobile applications that enhance user experiences. Every app I
+                        build is designed for performance, usability, and modern aesthetics.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="projects" class="loading">
+            <h1 id="h1">My Projects</h1>
+            <div id="projt">
+                <div class="projects">
+                    <div style="font-size: 36px; margin-bottom: 15px;">🚌</div>
+                    <h3>Bus Management & Seat Reservation System</h3>
+                    <p>A comprehensive system for managing bus schedules and seat reservations with real-time updates.</p>
+                    <a href="#" onclick="showProjectDetails('Bus Management System')">Click to see more info →</a>
+                </div>
+                <div class="projects">
+                    <div style="font-size: 36px; margin-bottom: 15px;">⚖️</div>
+                    <h3>BMI Calculator App</h3>
+                    <p>A user-friendly mobile application to calculate Body Mass Index with health recommendations.</p>
+                    <a href="#" onclick="showProjectDetails('BMI Calculator')">Click to see more info →</a>
+                </div>
+                <div class="projects">
+                    <div style="font-size: 36px; margin-bottom: 15px;">📤</div>
+                    <h3>Data Uploading App</h3>
+                    <p>Secure data upload application with progress tracking and cloud storage integration.</p>
+                    <a href="#" onclick="showProjectDetails('Data Upload App')">Click to see more info →</a>
+                </div>
+                <div class="projects">
+                    <div style="font-size: 36px; margin-bottom: 15px;">📊</div>
+                    <h3>Inventory Management System</h3>
+                    <p>Complete inventory tracking solution with analytics dashboard and automated reports.</p>
+                    <a href="/FYP/portfoli/p4.html">Click to see more info →</a>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="tools" class="loading">
+            <h1 id="h1">Development Tools</h1>
+            <div id="developtool">
+                <div class="tol">
+                    <div style="font-size: 48px; margin-bottom: 15px;">☕</div>
+                    <h3>IntelliJ IDEA</h3>
+                    <p>Java development environment with advanced debugging and code analysis features.</p>
+                </div>
+                <div class="tol">
+                    <div style="font-size: 48px; margin-bottom: 15px;">🐍</div>
+                    <h3>Anaconda</h3>
+                    <p>Python environment for data science and machine learning development.</p>
+                </div>
+                <div class="tol">
+                    <div style="font-size: 48px; margin-bottom: 15px;">💻</div>
+                    <h3>VS Code</h3>
+                    <p>Primary code editor with extensive extensions for web and mobile development.</p>
+                </div>
+                <div class="tol">
+                    <div style="font-size: 48px; margin-bottom: 15px;">📱</div>
+                    <h3>Android Studio</h3>
+                    <p>Official Android development IDE with emulator and advanced debugging tools.</p>
+                </div>
+                <div class="tol">
+                    <div style="font-size: 48px; margin-bottom: 15px;">🗃️</div>
+                    <h3>Oracle Database</h3>
+                    <p>Enterprise database management system for robust data storage solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="rabta" class="loading">
+            <h1 id="h1">Get In Touch</h1>
+            <div id="contact">
+                <div>
+                    <div style="font-size: 36px; margin-bottom: 10px;">📱</div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/yourphonenumber" target="_blank">Click to start chat</a>
+                </div>
+                <div>
+                    <div style="font-size: 36px; margin-bottom: 10px;">📧</div>
+                    <h4>Email</h4>
+                    <a href="mailto:your.email@gmail.com">your.email@gmail.com</a>
+                </div>
+                <div>
+                    <div style="font-size: 36px; margin-bottom: 10px;">💼</div>
+                    <h4>LinkedIn</h4>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    
+    <footer>
+        <div id="footer">
+            © 2025 Muhammad Ramzan. Thank you for visiting my portfolio! I look forward to connecting with you and creating impactful, innovative projects together.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+        
+        // Project details function
+        function showProjectDetails(projectName) {
+            alert(`More details about ${projectName} coming soon!`);
+        }
+        
+        // Loading animation trigger
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.loading');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.animation = 'fadeIn 1s ease-in forwards';
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+        
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.navbar').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
